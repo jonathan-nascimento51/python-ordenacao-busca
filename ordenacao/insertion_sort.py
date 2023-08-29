@@ -1,6 +1,6 @@
-"""Selection sort: (Classificação por inserção)"""
+"""Insertion sort: (Classificação por inserção)"""
 def executar_insertion_sort(lista):
-    """Selection sort: (Classificação por inserção)"""
+    """insertion sort: (Classificação por inserção)"""
     tamanho = len(lista)
     for i in range(1, tamanho):
         valor_inserir = lista[i]
