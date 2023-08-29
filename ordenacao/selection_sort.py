@@ -1,17 +1,14 @@
-"""Selection sort: (Classificação por inserção)"""
-def executar_insertion_sort(lista):
-    """Selection sort: (Classificação por inserção)"""
+"""Algoritmo de ordenação por seleção (selection sort):"""
+def executar_selection_sort(lista):
+    """Algoritmo de ordenação por seleção (selection sort):"""
     tamanho = len(lista)
-    for i in range(1, tamanho):
-        valor_inserir = lista[i]
-        j = i - 1
-
-        while j >= 0 and lista[j] > valor_inserir:
-            lista[j + 1] = lista[j]
-            j -= 1
-        lista[j + 1] = valor_inserir
-
+    for i in range(0, tamanho-1):
+        minimo = i
+        for j in range(i+1, tamanho):
+            if lista[j] < lista[minimo]:
+                minimo = j
+        lista[i], lista[minimo] = lista[minimo], lista[i]
     return lista
 
 lista1 = [10, 8, 7, 3, 2, 1]
-executar_insertion_sort(lista1)
+executar_selection_sort(lista1)
