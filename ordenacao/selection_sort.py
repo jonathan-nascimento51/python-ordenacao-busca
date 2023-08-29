@@ -11,4 +11,5 @@ def executar_selection_sort(lista):
     return lista
 
 lista1 = [10, 8, 7, 3, 2, 1]
-executar_selection_sort(lista1)
+lista_ordenada = executar_selection_sort(lista1)
+print(lista_ordenada)
